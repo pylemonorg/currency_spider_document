@@ -8,7 +8,7 @@
 > **注意**   
 > 由于驱动浏览器占用资源大，效率低，模版命名请加上`driver`标识，以助于管理。   
 > 驱动命名参考如下：   
-> `douban.py` 改为 **`driver_douban.py`*   
+> `douban.py` 改为 **`driver_douban.py`**   
 
 ### 新功能 - 正则替换
 - 支持正则替换
