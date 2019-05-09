@@ -3,6 +3,12 @@
 ## 模版说明
 > 这些取消的功能不会影响之前模版
 
+### 下载第三包
+在 cmd 输入下载第三方包
+- pip install scrapy-redis https://pypi.douban.com/simple
+- pip install redis https://pypi.douban.com/simple
+- pip install selenium https://pypi.douban.com/simple
+
 ### 新功能 - 动态网页加载
 - 支持动态加载 驱动chrome浏览器（版本：71.0.3573.0 (正式版本) （64 位））
 > **注意**
