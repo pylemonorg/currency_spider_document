@@ -25,6 +25,10 @@ setting_rule = {
 
     },
 
+    # MAX_DEPTH_LIMIT 抓取深度 等于原来模版 DEPTH_LIMIT
+    # 请不要轻易设置此字段，不用时请注释
+    # "MAX_DEPTH_LIMIT": 4,
+
     # 数据库固定字段 参考数据字典
     "ir_mediasource": "豆瓣网",  # 文章媒体来源
     "ir_mediatype": 2,  # 文章媒体类型
