@@ -93,7 +93,8 @@ setting_rule = {
     # 'encode': 'utf-8',
 
     # 提取规则
-    # xpath 提取规则
+    # xpath 提取规则 xath 优先级比 re_findall 高
+    # re_findall 正则提取
     # replace 替换的内容 优先级比 re_sub 高
     # re_sub 正则替换
     # handle 自定义处理函数 函数第一个参数必须为 xpath提取的内容，而且是提取的原格式list类型
@@ -107,6 +108,7 @@ setting_rule = {
 
         # 作者
         "author": {
+            're_findall': ['conent:([\s\S]+?)}'],
             'xpath': ['//span[@class="from"]//text()'],
             'replace': ['来自: '],
             're_sub': ['来自：']  # 正则替换
