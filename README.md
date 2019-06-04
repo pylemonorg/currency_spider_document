@@ -73,6 +73,10 @@ setting_rule = {
         '.*www.douban.com/group3/topic/.*': {},
 
     },
+    
+    # 过滤链接 正则
+    'filter_url': ['www.dgworld.com.cn'],
+    
     # MAX_DEPTH_LIMIT 抓取深度 等于原来模版 DEPTH_LIMIT
     # 请不要轻易设置此字段，不用时请注释
     # "MAX_DEPTH_LIMIT": 4,
@@ -88,7 +92,8 @@ setting_rule = {
     # 公共安全：17, 公共交通：18, 国内医药：19, 国外医药：20
     "ir_trade": -1,  # 行业id
     "ir_area": 2,  # 监控区域  国外：1， 国内：2
-
+    # 添加网站备案地址  默认None ，表示未知（没有），有填写地方简称即可（例如：湘ICP备05000618号 填写: 湘 即可）
+    "ir_librariytype": '湘',
     # 文章内容编码方式, 防止乱码
     # 'encode': 'utf-8',
 
