@@ -93,6 +93,7 @@ setting_rule = {
     "ir_trade": -1,  # 行业id
     "ir_area": 2,  # 监控区域  国外：1， 国内：2
     # 添加网站备案地址  默认None ，表示未知（没有），有填写地方简称即可（例如：湘ICP备05000618号 填写: 湘 即可）
+    # 如果网站没有备案地址 可以通过 http://icp.chinaz.com/www.hunan.gov.cn 查询
     # 如果特殊地区 请提前告知！！！
     "ir_librariytype": '湘',
     # 文章内容编码方式, 防止乱码
