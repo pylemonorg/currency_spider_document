@@ -70,8 +70,6 @@ setting_rule = {
     "article_url": {
         '.*www.douban.com/group/topic/.*': {"follow": True, "driver": True, "drop_down": 2},
         '.*www.douban.com/group2/topic/.*': {"follow": True, },
-        '.*www.douban.com/group3/topic/.*': {},
-
     },
     
     # 过滤链接 正则
@@ -167,6 +165,10 @@ setting_rule = {
     # 请求头, 根据网站自定义请求头
     "headers": {
         # "Host": 'search.kdnet.net'
+    },
+    # 自定义chrome请求头：
+    "driver_setting": {
+        # "User-Agent": 'app....'
     },
 }
 
