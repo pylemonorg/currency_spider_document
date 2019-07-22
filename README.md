@@ -118,6 +118,13 @@ setting_rule = {
             'replace': ['来自: '],
             're_sub': ['来自：']  # 正则替换
         },
+        # 来源    文章来源，自动与 ir_mediasource字段 匹配是否转发
+        "source": {
+            're_findall': ['source:([\s\S]+?)}'],
+            'xpath': ['//span[@class="source"]//text()'],
+            'replace': ['来源: '],
+            're_sub': ['来源：']  # 正则替换
+        },
 
         # 发布时间
         "pub_time": {
