@@ -1,3 +1,5 @@
+[TOC]
+
 # 通用爬虫说明文档
 
 ## 模版说明
@@ -180,3 +182,47 @@ setting_rule = {
 }
 
 ```
+## 更新功能
+### 自定义调用框架对象
+指定自定义函数中，可以调用框架的`self`, `response` 对象
+
+#### 示例
+```
+# 自定义函数示例
+# xpath_msg 参数为xpath提取内容 是个list() 类型
+# 提示：写定义函数时最好添加try 异常捕获，避免xpath_msg 里面提取内容不符造成函数报错
+def handle(xpath_mas, a='', b='', response='', self=''):
+    print('自定义函数')
+    # 这里的response是 scrapy 的response对象
+    try
+        url = response.url
+        spider_name = self.name
+    except:
+        url = ''
+        spider_nam = ''
+    print('爬虫名字：{} 当前url：{}'.formact(spider_name, url))
+    return url, spider_name
+
+# -----------
+# 模板调用示例
+setting_rule = {
+    "extract_rule": {
+
+        # 标题
+        "title": {
+            'xpath': [
+                # xpath 提取内容不能为空，为空的话不会调用自定义函数
+                '//div[@class="about_competition_detail_title"]//text()'
+            ],
+            # handle 指定调用的 函数
+            "handle": handle,
+            # args 指定的传参 
+            # key: response 表示，调用scrapy中response对象
+             # key: self 表示，调用scrapy中scrapy对象
+            "args": {"a": 'worldworldworld', "b": 'world', 'response': True, 'self': True}
+        },
+}
+
+```
+
+
