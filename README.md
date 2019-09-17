@@ -136,7 +136,8 @@ setting_rule = {
         # 内容
         "content": {
             'xpath': ['//div[@class="topic-richtext"]//text()'],
-            # "replace": [' __dzh__detail__renderGg__12();']
+            # "replace": [' __dzh__detail__renderGg__12();'],
+            "clear_js_css": True,  # 是否清除多余的js内容和css内容，默认不清除
         },
 
         # 栏目
